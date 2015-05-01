@@ -8,8 +8,15 @@ module.exports = function(app) {
   });
 
   app.post('/users/add', function (req, res) {
-    knex('users').insert( {username: req.body.username}).then(function (users) {
-      console.log(users);
+    knex('users').insert(req.body).then(function (users) {
+      knex('users').where(req.body).then(function (user_returned) {
+        return res.send(user_returned);
+      }).catch(function (error) {
+        return res.send(error);
+      });
+    }).catch(function (error) {
+      return res.send(error);
     });
   });
+
 }

@@ -5,12 +5,21 @@
 
 Welcome to TimeSync's documentation!
 ====================================
+TimeSync is an OSU Open Source Lab developed Time Tracking system.
 
-Contents:
+Development Docs
+----------------
+* :ref:`development`
 
-.. toctree::
-   :maxdepth: 2
+Design Docs
+-----------
+* :ref:`draft-api`
+* :ref:`draft-models`
 
+
+Meeting Notes
+-------------
+* :ref:`dev-meeting-2015-04-09`
 
 
 Indices and tables

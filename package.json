@@ -11,7 +11,8 @@
     "migrations": "knex migrate:latest",
     "recreate": "rm dev.sqlite3 && knex migrate:latest",
     "linter": "jshint ./src ./tests",
-    "test": "./node_modules/.bin/mocha tests/"
+    "fixtures": "node ./scripts/load_fixtures.js",
+    "test": "mocha tests/"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,7 @@
     "knex": "^0.7.6",
     "mocha": "^2.2.4",
     "request": "^2.55.0",
-    "sqlite3": "^3.0.5"
+    "sqlite3": "^3.0.8"
   },
   "devDependencies": {
     "jshint": "^2.6.3",
